@@ -119,7 +119,7 @@ function Library:CreateMain()
 		local UICorner_5 = Instance.new("UICorner")
 		local TabName = Instance.new("TextLabel")
 
-		CheatPreset.Name = "CheatPreset"
+		CheatPreset.Name = name
 		CheatPreset.Parent = CheatContainer
 		CheatPreset.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		CheatPreset.BackgroundTransparency = 1.000
