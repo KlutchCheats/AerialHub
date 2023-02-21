@@ -90,7 +90,7 @@ function Library:CreateMain()
 	UIGridLayout.VerticalAlignment = Enum.VerticalAlignment.Center
 	UIGridLayout.CellSize = UDim2.new(0, 80, 0, 30)
 
-	function Library:CreateTab(name)
+	function GameLib:CreateTab(name)
 		local TabPreset = Instance.new("TextButton")
 		local UICorner_4 = Instance.new("UICorner")
 		
