@@ -111,7 +111,7 @@ function Library:CreateMain()
 		TabPreset.MouseButton1Click:Connect(function()
 			for i,v in pairs(CheatContainer:GetChildren()) do
 				v.Visible = false
-				v:FindFirstChild(Name).Visible = true
+				v:FindFirstChild(name).Visible = true
 			end
 		end)
 		
