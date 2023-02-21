@@ -3,6 +3,9 @@ local Library = {}
 function Library:CreateMain()
 	local AerialHub = Instance.new("ScreenGui")
 	local MainFrame = Instance.new("Frame")
+	local uistrokemainframe = Instance.new("UIStroke")
+	uistrokemainframe.Color = Color3.fromRGB(161, 161, 161)
+	uistrokemainframe.Parent = MainFrame
 	local UICorner = Instance.new("UICorner")
 	local TopBar = Instance.new("Frame")
 	local UICorner_2 = Instance.new("UICorner")
@@ -13,6 +16,12 @@ function Library:CreateMain()
 	local UICorner_3 = Instance.new("UICorner")
 	local UIGridLayout = Instance.new("UIGridLayout")
 	local CheatContainer = Instance.new("Frame")
+	local uistroketabs = Instance.new("UIStroke")
+	uistroketabs.Color = Color3.fromRGB(63, 63, 63)
+	uistroketabs.Parent = Tabs
+	local uistrokecheats = Instance.new("UIStroke")
+	uistrokecheats.Color = Color3.fromRGB(161, 161, 161)
+	uistrokecheats.Parent = CheatContainer
 	
 	local GameLib = {}
 
