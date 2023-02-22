@@ -13,8 +13,6 @@ function lib:CreateMain()
 	local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
 	local Tabs = Instance.new("Frame")
 	local UIGridLayout = Instance.new("UIGridLayout")
-	local TabPreset = Instance.new("TextButton")
-	local UICorner_2 = Instance.new("UICorner")
 	local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
 	local CheatContainer = Instance.new("Frame")
 
@@ -102,25 +100,6 @@ function lib:CreateMain()
 	UIGridLayout.VerticalAlignment = Enum.VerticalAlignment.Center
 	UIGridLayout.CellSize = UDim2.new(0.182999998, 0, 0.75, 0)
 
-	TabPreset.Name = "TabPreset"
-	TabPreset.Parent = Tabs
-	TabPreset.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
-	TabPreset.BorderSizePixel = 0
-	TabPreset.Position = UDim2.new(0, 9, 0, 5)
-	TabPreset.Size = UDim2.new(0, 79, 0, 30)
-	TabPreset.Font = Enum.Font.SourceSansBold
-	TabPreset.Text = "Main"
-	TabPreset.TextColor3 = Color3.fromRGB(126, 126, 126)
-	TabPreset.TextScaled = true
-	TabPreset.TextSize = 20.000
-	TabPreset.TextWrapped = true
-
-	UICorner_2.CornerRadius = UDim.new(0, 3)
-	UICorner_2.Parent = TabPreset
-
-	UITextSizeConstraint_4.Parent = TabPreset
-	UITextSizeConstraint_4.MaxTextSize = 20
-
 	CheatContainer.Name = "CheatContainer"
 	CheatContainer.Parent = MainFrame
 	CheatContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -129,11 +108,39 @@ function lib:CreateMain()
 	CheatContainer.Size = UDim2.new(0, 445, 0, 386)
 
 	function GameLib:CreateTab(name)
+		local TabPreset = Instance.new("TextButton")
+		local UICorner_2 = Instance.new("UICorner")
 		local CheatPreset = Instance.new("Frame")
 		local TabName = Instance.new("TextLabel")
 		local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
 		local Container = Instance.new("ScrollingFrame")
 		local UIGridLayout_2 = Instance.new("UIGridLayout")
+		
+		TabPreset.Name = name
+		TabPreset.Parent = Tabs
+		TabPreset.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+		TabPreset.BorderSizePixel = 0
+		TabPreset.Position = UDim2.new(0, 9, 0, 5)
+		TabPreset.Size = UDim2.new(0, 79, 0, 30)
+		TabPreset.Font = Enum.Font.SourceSansBold
+		TabPreset.Text = name
+		TabPreset.TextColor3 = Color3.fromRGB(126, 126, 126)
+		TabPreset.TextScaled = true
+		TabPreset.TextSize = 20.000
+		TabPreset.TextWrapped = true
+		
+		TabPreset.MouseButton1Click:Connect(function()
+			for i,v in pairs(CheatContainer:GetChildren()) do
+				v.Visible = false
+				CheatPreset.Visible = true
+			end
+		end)
+
+		UICorner_2.CornerRadius = UDim.new(0, 3)
+		UICorner_2.Parent = TabPreset
+
+		UITextSizeConstraint_4.Parent = TabPreset
+		UITextSizeConstraint_4.MaxTextSize = 20
 		
 		CheatPreset.Name = name
 		CheatPreset.Parent = CheatContainer
