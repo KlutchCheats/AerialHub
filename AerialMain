@@ -276,7 +276,7 @@ function lib:CreateMain()
 		
 	end
 
-	function GameLib:CreateSlider(cheat, text, call)
+	function GameLib:CreateSlider(cheat, text, startvalue, call)
 		local SliderPreset = Instance.new("Frame")
 		local UICorner_6 = Instance.new("UICorner")
 		local Text_2 = Instance.new("TextLabel")
@@ -355,7 +355,7 @@ function lib:CreateMain()
 		SliderValue.Position = UDim2.new(0, 372, 0, 0)
 		SliderValue.Size = UDim2.new(0, 40, 0, 51)
 		SliderValue.Font = Enum.Font.Unknown
-		SliderValue.Text = "100"
+		SliderValue.Text = startvalue
 		SliderValue.TextColor3 = Color3.fromRGB(179, 179, 179)
 		SliderValue.TextScaled = true
 		SliderValue.TextSize = 23.000
