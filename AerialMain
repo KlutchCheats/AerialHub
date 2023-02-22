@@ -1,29 +1,25 @@
-local Library = {}
+local library = {}
 
-function Library:CreateMain()
+function library:CreateMain()
+	local GameLib = {}
+	
 	local AerialHub = Instance.new("ScreenGui")
 	local MainFrame = Instance.new("Frame")
-	local uistrokemainframe = Instance.new("UIStroke")
-	uistrokemainframe.Color = Color3.fromRGB(161, 161, 161)
-	uistrokemainframe.Parent = MainFrame
-	local UICorner = Instance.new("UICorner")
 	local TopBar = Instance.new("Frame")
-	local UICorner_2 = Instance.new("UICorner")
-	local UIversion = Instance.new("TextLabel")
 	local Name = Instance.new("TextLabel")
+	local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 	local Name_2 = Instance.new("TextLabel")
+	local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+	local UICorner = Instance.new("UICorner")
+	local VersionLabel = Instance.new("TextLabel")
+	local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
 	local Tabs = Instance.new("Frame")
-	local UICorner_3 = Instance.new("UICorner")
 	local UIGridLayout = Instance.new("UIGridLayout")
+	local TabPreset = Instance.new("TextButton")
+	local UICorner_2 = Instance.new("UICorner")
+	local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
 	local CheatContainer = Instance.new("Frame")
-	local uistroketabs = Instance.new("UIStroke")
-	uistroketabs.Color = Color3.fromRGB(63, 63, 63)
-	uistroketabs.Parent = Tabs
-	local uistrokecheats = Instance.new("UIStroke")
-	uistrokecheats.Color = Color3.fromRGB(161, 161, 161)
-	uistrokecheats.Parent = CheatContainer
-	
-	local GameLib = {}
+	local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 
 	--Properties:
 
@@ -33,133 +29,391 @@ function Library:CreateMain()
 
 	MainFrame.Name = "MainFrame"
 	MainFrame.Parent = AerialHub
+	MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 	MainFrame.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
-	MainFrame.Position = UDim2.new(0.340941519, 0, 0.209876552, 0)
-	MainFrame.Size = UDim2.new(0, 445, 0, 470)
-	MainFrame.Active = true
-	MainFrame.Draggable = true
-
-	UICorner.CornerRadius = UDim.new(0, 3)
-	UICorner.Parent = MainFrame
+	MainFrame.BorderColor3 = Color3.fromRGB(161, 161, 161)
+	MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+	MainFrame.Size = UDim2.new(0.317403704, 0, 0.580246925, 0)
 
 	TopBar.Name = "TopBar"
 	TopBar.Parent = MainFrame
 	TopBar.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-	TopBar.Size = UDim2.new(0, 445, 0, 30)
-
-	UICorner_2.CornerRadius = UDim.new(0, 3)
-	UICorner_2.Parent = TopBar
-
-	UIversion.Name = "Version"
-	UIversion.Parent = TopBar
-	UIversion.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	UIversion.BackgroundTransparency = 1.000
-	UIversion.Position = UDim2.new(0.0292133242, 0, 0, 0)
-	UIversion.Size = UDim2.new(0, 64, 0, 30)
-	UIversion.Font = Enum.Font.Unknown
-	UIversion.Text = "v1.0"
-	UIversion.TextColor3 = Color3.fromRGB(90, 90, 90)
-	UIversion.TextSize = 23.000
-	UIversion.TextXAlignment = Enum.TextXAlignment.Left
+	TopBar.Size = UDim2.new(1, 0, 0.0638297871, 0)
 
 	Name.Name = "Name"
 	Name.Parent = TopBar
 	Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Name.BackgroundTransparency = 1.000
-	Name.Position = UDim2.new(0.36179775, 0, 0, 0)
-	Name.Size = UDim2.new(0, 66, 0, 30)
+	Name.Position = UDim2.new(0.373033702, 0, 0, 0)
+	Name.Size = UDim2.new(0.14831461, 0, 1, 0)
 	Name.Font = Enum.Font.Unknown
 	Name.Text = "Aerial"
 	Name.TextColor3 = Color3.fromRGB(212, 212, 212)
+	Name.TextScaled = true
 	Name.TextSize = 25.000
+	Name.TextWrapped = true
+
+	UITextSizeConstraint.Parent = Name
+	UITextSizeConstraint.MaxTextSize = 25
 
 	Name_2.Name = "Name"
-	Name_2.Parent = TopBar
+	Name_2.Parent = Name
 	Name_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Name_2.BackgroundTransparency = 1.000
-	Name_2.Position = UDim2.new(0.510112345, 0, 0, 0)
-	Name_2.Size = UDim2.new(0, 56, 0, 30)
+	Name_2.Position = UDim2.new(0.994960904, 0, 0, 0)
+	Name_2.Size = UDim2.new(0.702011585, 0, 1, 0)
 	Name_2.Font = Enum.Font.Unknown
 	Name_2.Text = "Hub"
 	Name_2.TextColor3 = Color3.fromRGB(112, 112, 112)
+	Name_2.TextScaled = true
 	Name_2.TextSize = 25.000
+	Name_2.TextWrapped = true
+
+	UITextSizeConstraint_2.Parent = Name_2
+	UITextSizeConstraint_2.MaxTextSize = 25
+
+	UICorner.CornerRadius = UDim.new(0, 3)
+	UICorner.Parent = TopBar
+
+	VersionLabel.Name = "Version"
+	VersionLabel.Parent = TopBar
+	VersionLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	VersionLabel.BackgroundTransparency = 1.000
+	VersionLabel.Position = UDim2.new(0.0292133242, 0, 0, 0)
+	VersionLabel.Size = UDim2.new(0.143820226, 0, 1, 0)
+	VersionLabel.Font = Enum.Font.Unknown
+	VersionLabel.Text = "v1.0"
+	VersionLabel.TextColor3 = Color3.fromRGB(90, 90, 90)
+	VersionLabel.TextScaled = true
+	VersionLabel.TextSize = 23.000
+	VersionLabel.TextWrapped = true
+	VersionLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+	UITextSizeConstraint_3.Parent = VersionLabel
+	UITextSizeConstraint_3.MaxTextSize = 23
 
 	Tabs.Name = "Tabs"
 	Tabs.Parent = MainFrame
 	Tabs.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+	Tabs.BorderColor3 = Color3.fromRGB(63, 63, 63)
 	Tabs.Position = UDim2.new(0.0134831462, 0, 0.076595746, 0)
-	Tabs.Size = UDim2.new(0, 433, 0, 40)
-
-	UICorner_3.CornerRadius = UDim.new(0, 3)
-	UICorner_3.Parent = Tabs
+	Tabs.Size = UDim2.new(0.973033726, 0, 0.0851063803, 0)
 
 	UIGridLayout.Parent = Tabs
 	UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 	UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
 	UIGridLayout.VerticalAlignment = Enum.VerticalAlignment.Center
-	UIGridLayout.CellSize = UDim2.new(0, 80, 0, 30)
+	UIGridLayout.CellSize = UDim2.new(0.182999998, 0, 0.75, 0)
 
-	function GameLib:CreateTab(name)
-		local TabPreset = Instance.new("TextButton")
-		local UICorner_4 = Instance.new("UICorner")
-		
-		TabPreset.Name = name
-		TabPreset.Parent = Tabs
-		TabPreset.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
-		TabPreset.BorderSizePixel = 0
-		TabPreset.Position = UDim2.new(0.02078522, 0, 0.125, 0)
-		TabPreset.Size = UDim2.new(0, 78, 0, 30)
-		TabPreset.Font = Enum.Font.SourceSansBold
-		TabPreset.Text = name
-		TabPreset.TextColor3 = Color3.fromRGB(126, 126, 126)
-		TabPreset.TextSize = 20.000
+	TabPreset.Name = "TabPreset"
+	TabPreset.Parent = Tabs
+	TabPreset.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+	TabPreset.BorderSizePixel = 0
+	TabPreset.Position = UDim2.new(0.02078522, 0, 0.125, 0)
+	TabPreset.Size = UDim2.new(0.184757501, 0, 0.75, 0)
+	TabPreset.Font = Enum.Font.SourceSansBold
+	TabPreset.Text = "Main"
+	TabPreset.TextColor3 = Color3.fromRGB(126, 126, 126)
+	TabPreset.TextScaled = true
+	TabPreset.TextSize = 20.000
+	TabPreset.TextWrapped = true
 
-		UICorner_4.CornerRadius = UDim.new(0, 3)
-		UICorner_4.Parent = TabPreset
-		
-		TabPreset.MouseButton1Click:Connect(function()
-			for i,v in pairs(CheatContainer:GetChildren()) do
-				v.Visible = false
-				CheatContainer:FindFirstChild(name).Visible = true
-			end
-		end)
-		
-		local CheatPreset = Instance.new("Frame")
-		local UICorner_5 = Instance.new("UICorner")
-		local TabName = Instance.new("TextLabel")
+	UICorner_2.CornerRadius = UDim.new(0, 3)
+	UICorner_2.Parent = TabPreset
 
-		CheatPreset.Name = name
-		CheatPreset.Parent = CheatContainer
-		CheatPreset.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		CheatPreset.BackgroundTransparency = 1.000
-		CheatPreset.Position = UDim2.new(0.0134831462, 0, 0.0191158652, 0)
-		CheatPreset.Size = UDim2.new(0, 433, 0, 371)
-
-		UICorner_5.CornerRadius = UDim.new(0, 3)
-		UICorner_5.Parent = CheatPreset
-
-		TabName.Name = name
-		TabName.Parent = CheatPreset
-		TabName.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
-		TabName.BorderSizePixel = 0
-		TabName.Position = UDim2.new(0.0254041571, 0, -0.0242587607, 0)
-		TabName.Size = UDim2.new(0, 88, 0, 16)
-		TabName.Font = Enum.Font.SourceSansBold
-		TabName.Text = name
-		TabName.TextColor3 = Color3.fromRGB(90, 90, 90)
-		TabName.TextSize = 20.000
-	end
+	UITextSizeConstraint_4.Parent = TabPreset
+	UITextSizeConstraint_4.MaxTextSize = 20
 
 	CheatContainer.Name = "CheatContainer"
 	CheatContainer.Parent = MainFrame
 	CheatContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	CheatContainer.BackgroundTransparency = 1.000
 	CheatContainer.Position = UDim2.new(0, 0, 0.17872341, 0)
-	CheatContainer.Size = UDim2.new(0, 445, 0, 386)
+	CheatContainer.Size = UDim2.new(1, 0, 0.821276605, 0)
+	
+	function GameLib:CreateTab(name)
+		local CheatPreset = Instance.new("Frame")
+		local TabName = Instance.new("TextLabel")
+		local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
+		local Container = Instance.new("ScrollingFrame")
+		local UIGridLayout_2 = Instance.new("UIGridLayout")
+		
+		CheatPreset.Name = name
+		CheatPreset.Parent = CheatContainer
+		CheatPreset.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+		CheatPreset.BorderColor3 = Color3.fromRGB(161, 161, 161)
+		CheatPreset.Position = UDim2.new(0.0134831462, 0, 0.0191158652, 0)
+		CheatPreset.Size = UDim2.new(0.973033726, 0, 0.961139917, 0)
+
+		TabName.Name = name
+		TabName.Parent = CheatPreset
+		TabName.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+		TabName.BorderSizePixel = 0
+		TabName.Position = UDim2.new(0.0254041571, 0, -0.0242587607, 0)
+		TabName.Size = UDim2.new(0.203233257, 0, 0.0431266837, 0)
+		TabName.Font = Enum.Font.SourceSansBold
+		TabName.Text = name
+		TabName.TextColor3 = Color3.fromRGB(90, 90, 90)
+		TabName.TextScaled = true
+		TabName.TextSize = 20.000
+		TabName.TextWrapped = true
+
+		UITextSizeConstraint_5.Parent = TabName
+		UITextSizeConstraint_5.MaxTextSize = 20
+
+		Container.Name = "Container"
+		Container.Parent = CheatPreset
+		Container.Active = true
+		Container.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Container.BackgroundTransparency = 1.000
+		Container.Position = UDim2.new(0, 0, 0.0350000001, 0)
+		Container.Size = UDim2.new(1, 0, 0.964959562, 0)
+		Container.ScrollBarThickness = 0
+
+		UIGridLayout_2.Parent = Container
+		UIGridLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+		UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+		UIGridLayout_2.CellSize = UDim2.new(0.970000029, 0, 0.0700000003, 0)
+	end
+	
+	function GameLib:CreateText(cheat, text)
+		local TextPreset = Instance.new("TextLabel")
+		local UICorner_3 = Instance.new("UICorner")
+		local UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
+		
+		TextPreset.Name = "TextPreset"
+		TextPreset.Parent = CheatContainer:FindFirstChild(cheat).Container
+		TextPreset.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+		TextPreset.Size = UDim2.new(0, 200, 0, 50)
+		TextPreset.Font = Enum.Font.Ubuntu
+		TextPreset.Text = text
+		TextPreset.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextPreset.TextScaled = true
+		TextPreset.TextSize = 25.000
+		TextPreset.TextWrapped = true
+
+		UICorner_3.CornerRadius = UDim.new(0, 3)
+		UICorner_3.Parent = TextPreset
+
+		UITextSizeConstraint_6.Parent = TextPreset
+		UITextSizeConstraint_6.MaxTextSize = 25
+	end
+	
+	function GameLib:CreateToggle(cheat, text)
+		local Text = Instance.new("TextLabel")
+		local UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
+		
+		local TogglePreset = Instance.new("Frame")
+		local UICorner_4 = Instance.new("UICorner")
+		local ToggleButton = Instance.new("TextButton")
+		local UICorner_5 = Instance.new("UICorner")
+		local UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
+		
+		TogglePreset.Name = "TogglePreset"
+		TogglePreset.Parent = CheatContainer:FindFirstChild(cheat).Container
+		TogglePreset.BackgroundColor3 = Color3.fromRGB(104, 90, 255)
+		TogglePreset.Size = UDim2.new(0, 100, 0, 100)
+
+		UICorner_4.CornerRadius = UDim.new(0, 3)
+		UICorner_4.Parent = TogglePreset
+
+		ToggleButton.Name = "ToggleButton"
+		ToggleButton.Parent = TogglePreset
+		ToggleButton.BackgroundColor3 = Color3.fromRGB(255, 5, 5)
+		ToggleButton.BorderSizePixel = 0
+		ToggleButton.Position = UDim2.new(0.893975914, 0, 0.140000001, 0)
+		ToggleButton.Size = UDim2.new(0.0843373463, 0, 0.699999988, 0)
+		ToggleButton.Font = Enum.Font.FredokaOne
+		ToggleButton.Text = "X"
+		ToggleButton.TextColor3 = Color3.fromRGB(197, 104, 104)
+		ToggleButton.TextScaled = true
+		ToggleButton.TextSize = 20.000
+		ToggleButton.TextWrapped = true
+
+		UICorner_5.Parent = ToggleButton
+
+		UITextSizeConstraint_7.Parent = ToggleButton
+		UITextSizeConstraint_7.MaxTextSize = 20
+		
+		Text.Name = "Text"
+		Text.Parent = TogglePreset
+		Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Text.BackgroundTransparency = 1.000
+		Text.Position = UDim2.new(0.0240963865, 0, 0, 0)
+		Text.Size = UDim2.new(0.739759028, 0, 1, 0)
+		Text.Font = Enum.Font.Unknown
+		Text.Text = Text
+		Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Text.TextScaled = true
+		Text.TextSize = 25.000
+		Text.TextWrapped = true
+		Text.TextXAlignment = Enum.TextXAlignment.Left
+
+		UITextSizeConstraint_8.Parent = Text
+		UITextSizeConstraint_8.MaxTextSize = 25
+		
+		local function TPOQQJ_fake_script() -- ToggleButton.LocalScript 
+			local script = Instance.new('LocalScript', ToggleButton)
+
+			local enabled = false
+
+			script.Parent.MouseButton1Click:Connect(function()
+				enabled = not enabled
+
+				if enabled then
+					script.Parent.BackgroundColor3 = Color3.fromRGB(20, 255, 126)
+					script.Parent.TextColor3 = Color3.fromRGB(100, 197, 83)
+					script.Parent.Text = "O"
+				else
+					script.Parent.BackgroundColor3 = Color3.fromRGB(255, 5, 5)
+					script.Parent.TextColor3 = Color3.fromRGB(197, 104, 104)
+					script.Parent.Text = "X"
+				end
+			end)
+		end
+		coroutine.wrap(TPOQQJ_fake_script)()
+	end
+	
+	function GameLib:CreateSlider(cheat, text)
+		local SliderPreset = Instance.new("Frame")
+		local UICorner_6 = Instance.new("UICorner")
+		local Text_2 = Instance.new("TextLabel")
+		local UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint")
+		local SliderFrame = Instance.new("Frame")
+		local UICorner_7 = Instance.new("UICorner")
+		local Bounds = Instance.new("Frame")
+		local TextButton = Instance.new("TextButton")
+		local UICorner_8 = Instance.new("UICorner")
+		local UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint")
+		local UICorner_9 = Instance.new("UICorner")
+		local SliderValue = Instance.new("TextLabel")
+		local UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint")
+		
+		SliderPreset.Name = "SliderPreset"
+		SliderPreset.Parent = CheatContainer:FindFirstChild(cheat).Container
+		SliderPreset.BackgroundColor3 = Color3.fromRGB(104, 90, 255)
+		SliderPreset.Size = UDim2.new(0, 100, 0, 100)
+
+		UICorner_6.CornerRadius = UDim.new(0, 3)
+		UICorner_6.Parent = SliderPreset
+
+		Text_2.Name = "Text"
+		Text_2.Parent = SliderPreset
+		Text_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Text_2.BackgroundTransparency = 1.000
+		Text_2.Position = UDim2.new(0.0240963846, 0, 0, 0)
+		Text_2.Size = UDim2.new(0.431325287, 0, 1, 0)
+		Text_2.Font = Enum.Font.Unknown
+		Text_2.Text = text
+		Text_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Text_2.TextScaled = true
+		Text_2.TextSize = 25.000
+		Text_2.TextWrapped = true
+		Text_2.TextXAlignment = Enum.TextXAlignment.Left
+
+		UITextSizeConstraint_9.Parent = Text_2
+		UITextSizeConstraint_9.MaxTextSize = 25
+
+		SliderFrame.Name = "SliderFrame"
+		SliderFrame.Parent = SliderPreset
+		SliderFrame.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+		SliderFrame.Position = UDim2.new(0.501204848, 0, 0.439999998, 0)
+		SliderFrame.Size = UDim2.new(0.38072288, 0, 0.119999997, 0)
+
+		UICorner_7.Parent = SliderFrame
+
+		Bounds.Name = "Bounds"
+		Bounds.Parent = SliderFrame
+		Bounds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Bounds.BackgroundTransparency = 1.000
+		Bounds.Position = UDim2.new(0, 0, -3.66666675, 0)
+		Bounds.Size = UDim2.new(1, 0, 8.33333302, 0)
+
+		TextButton.Parent = SliderFrame
+		TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextButton.Position = UDim2.new(0.462729961, 0, -0.320883095, 0)
+		TextButton.Size = UDim2.new(0.0500289351, 0, 1.64176476, 0)
+		TextButton.Font = Enum.Font.SourceSans
+		TextButton.Text = ""
+		TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextButton.TextSize = 14.000
+
+		UICorner_8.Parent = TextButton
+
+		UITextSizeConstraint_10.Parent = TextButton
+		UITextSizeConstraint_10.MaxTextSize = 14
+
+		UICorner_9.CornerRadius = UDim.new(0, 100)
+		UICorner_9.Parent = TextButton
+
+		SliderValue.Name = "SliderValue"
+		SliderValue.Parent = SliderPreset
+		SliderValue.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		SliderValue.BackgroundTransparency = 1.000
+		SliderValue.Position = UDim2.new(0.886747003, 0, 0, 0)
+		SliderValue.Size = UDim2.new(0.0963855386, 0, 1, 0)
+		SliderValue.Font = Enum.Font.Unknown
+		SliderValue.Text = "100"
+		SliderValue.TextColor3 = Color3.fromRGB(179, 179, 179)
+		SliderValue.TextScaled = true
+		SliderValue.TextSize = 23.000
+		SliderValue.TextWrapped = true
+
+		UITextSizeConstraint_11.Parent = SliderValue
+		UITextSizeConstraint_11.MaxTextSize = 23
+		
+		local function WGKEWE_fake_script() -- TextButton.LocalScript 
+			local script = Instance.new('LocalScript', TextButton)
+
+			local sliderButton = script.Parent
+			local sliderFrame = sliderButton.Parent
+			local sliderValue = sliderFrame.Parent.SliderValue
+			local UserInputService = game:GetService("UserInputService")
+
+			local function updateSlider(mousePos)
+				local sliderWidth = sliderFrame.AbsoluteSize.X
+				local buttonWidth = sliderButton.AbsoluteSize.X
+				local sliderPos = mousePos.X - sliderFrame.AbsolutePosition.X
+				sliderPos = math.clamp(sliderPos, 0, sliderWidth - buttonWidth)
+				local newSliderValue = math.floor((sliderPos / sliderWidth) * 125)
+
+				local buttonOffset = (sliderFrame.AbsoluteSize.Y - sliderButton.AbsoluteSize.Y) / 2
+				sliderButton.Position = UDim2.new(sliderPos / sliderWidth, 0, 0.6, -sliderButton.AbsoluteSize.Y / 2 + buttonOffset)
+				sliderValue.Text = tostring(newSliderValue)
+			end
+
+			sliderButton.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 then
+					updateSlider(input.Position)
+					while UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) do
+						updateSlider(UserInputService:GetMouseLocation())
+						wait()
+					end
+				end
+			end)
+
+			sliderFrame.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 then
+					updateSlider(input.Position)
+					while UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) do
+						updateSlider(UserInputService:GetMouseLocation())
+						wait()
+					end
+				end
+			end)
+
+		end
+		coroutine.wrap(WGKEWE_fake_script)()
+	end
+
+	UIAspectRatioConstraint.Parent = MainFrame
+	UIAspectRatioConstraint.AspectRatio = 0.947
 
 	-- Scripts:
 
-	local function UMNKI_fake_script() -- AerialHub.NameSpoofer 
+	
+	
+	local function BADOX_fake_script() -- AerialHub.NameSpoofer 
 		local script = Instance.new('LocalScript', AerialHub)
 
 		local chars = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}
@@ -175,9 +429,9 @@ function Library:CreateMain()
 			end
 		end
 	end
-	coroutine.wrap(UMNKI_fake_script)()
+	coroutine.wrap(BADOX_fake_script)()
 	
 	return GameLib;
 end
 
-return Library;
+return library;
