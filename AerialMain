@@ -236,17 +236,21 @@ function lib:CreateMain()
 		ToggleButton.TextSize = 20.000
 		ToggleButton.TextWrapped = true
 		
+		call = call or function() end
+		
 		local enabled = false
 		
 		ToggleButton.MouseButton1Click:Connect(function()		
 			enabled = not enabled
+			
+			pcall(function()
+				call(enabled)
+			end)
 
 			if enabled then
 				ToggleButton.BackgroundColor3 = Color3.fromRGB(20, 255, 126)
 				ToggleButton.TextColor3 = Color3.fromRGB(100, 197, 83)
 				ToggleButton.Text = "O"
-				
-				pcall(call)
 			else
 				ToggleButton.BackgroundColor3 = Color3.fromRGB(255, 5, 5)
 				ToggleButton.TextColor3 = Color3.fromRGB(197, 104, 104)
