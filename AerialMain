@@ -250,21 +250,21 @@ function lib:CreateMain()
 		UITextSizeConstraint_7.Parent = ToggleButton
 		UITextSizeConstraint_7.MaxTextSize = 20
 
-		Text.Name = Text
+		Text.Name = text
 		Text.Parent = TogglePreset
 		Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Text.BackgroundTransparency = 1.000
 		Text.Position = UDim2.new(0, 10, 0, 0)
 		Text.Size = UDim2.new(0, 310, 0, 51)
 		Text.Font = Enum.Font.Unknown
-		Text.Text = Text
+		Text.Text = text
 		Text.TextColor3 = Color3.fromRGB(255, 255, 255)
 		Text.TextScaled = true
 		Text.TextSize = 25.000
 		Text.TextWrapped = true
 		Text.TextXAlignment = Enum.TextXAlignment.Left
 
-		UITextSizeConstraint_8.Parent = Text
+		UITextSizeConstraint_8.Parent = text
 		UITextSizeConstraint_8.MaxTextSize = 25
 		
 	end
