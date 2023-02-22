@@ -29,7 +29,7 @@ function library:CreateMain()
 	MainFrame.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
 	MainFrame.BorderColor3 = Color3.fromRGB(161, 161, 161)
 	MainFrame.Position = UDim2.new(0, 701,0, 405)
-	MainFrame.Size = UDim2.new(0.317403704, 0, 0.580246925, 0)
+	MainFrame.Size = UDim2.new(0, 445,0, 470)
 
 	TopBar.Name = "TopBar"
 	TopBar.Parent = MainFrame
