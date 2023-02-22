@@ -240,15 +240,15 @@ function lib:CreateMain()
 			enabled = not enabled
 
 			if enabled then
-				script.Parent.BackgroundColor3 = Color3.fromRGB(20, 255, 126)
-				script.Parent.TextColor3 = Color3.fromRGB(100, 197, 83)
-				script.Parent.Text = "O"
+				ToggleButton.BackgroundColor3 = Color3.fromRGB(20, 255, 126)
+				ToggleButton.TextColor3 = Color3.fromRGB(100, 197, 83)
+				ToggleButton.Text = "O"
 				
 				pcall(call)
 			else
-				script.Parent.BackgroundColor3 = Color3.fromRGB(255, 5, 5)
-				script.Parent.TextColor3 = Color3.fromRGB(197, 104, 104)
-				script.Parent.Text = "X"
+				ToggleButton.BackgroundColor3 = Color3.fromRGB(255, 5, 5)
+				ToggleButton.TextColor3 = Color3.fromRGB(197, 104, 104)
+				ToggleButton.Text = "X"
 			end
 		end)
 
