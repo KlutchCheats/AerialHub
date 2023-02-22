@@ -264,7 +264,7 @@ function lib:CreateMain()
 		Text.TextWrapped = true
 		Text.TextXAlignment = Enum.TextXAlignment.Left
 
-		UITextSizeConstraint_8.Parent = text
+		UITextSizeConstraint_8.Parent = Text
 		UITextSizeConstraint_8.MaxTextSize = 25
 		
 	end
