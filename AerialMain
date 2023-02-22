@@ -354,8 +354,12 @@ function lib:CreateMain()
 		SliderValue.TextSize = 23.000
 		SliderValue.TextWrapped = true
 		
+		call = call or function() end
+		
 		SliderValue.Changed:Connect(function()
-			pcall(call)
+			pcall(function()
+				call(tonumber(SliderValue.Text))
+			end)
 		end)
 
 		UITextSizeConstraint_11.Parent = SliderValue
@@ -427,4 +431,8 @@ function lib:CreateMain()
 		end
 	end
 	coroutine.wrap(NSQS_fake_script)()
+	
+	return GameLib;
 end
+
+return lib;
