@@ -41,7 +41,7 @@ function lib:CreateMain()
 	Name.BackgroundTransparency = 1.000
 	Name.Position = UDim2.new(0, 165, 0, 0)
 	Name.Size = UDim2.new(0, 66, 0, 30)
-	Name.Font = Enum.Font.Unknown
+	Name.Font = Enum.Font.Michroma
 	Name.Text = "Aerial"
 	Name.TextColor3 = Color3.fromRGB(212, 212, 212)
 	Name.TextScaled = true
@@ -57,7 +57,7 @@ function lib:CreateMain()
 	Name_2.BackgroundTransparency = 1.000
 	Name_2.Position = UDim2.new(0.994960904, 0, 0, 0)
 	Name_2.Size = UDim2.new(0.702011585, 0, 1, 0)
-	Name_2.Font = Enum.Font.Unknown
+	Name_2.Font = Enum.Font.Michroma
 	Name_2.Text = "Hub"
 	Name_2.TextColor3 = Color3.fromRGB(112, 112, 112)
 	Name_2.TextScaled = true
@@ -76,7 +76,7 @@ function lib:CreateMain()
 	UIVersion.BackgroundTransparency = 1.000
 	UIVersion.Position = UDim2.new(0, 12, 0, 0)
 	UIVersion.Size = UDim2.new(0, 64, 0, 30)
-	UIVersion.Font = Enum.Font.Unknown
+	UIVersion.Font = Enum.Font.Sarpanch
 	UIVersion.Text = "v1.0"
 	UIVersion.TextColor3 = Color3.fromRGB(90, 90, 90)
 	UIVersion.TextScaled = true
@@ -263,7 +263,7 @@ function lib:CreateMain()
 		Text.BackgroundTransparency = 1.000
 		Text.Position = UDim2.new(0, 10, 0, 0)
 		Text.Size = UDim2.new(0, 310, 0, 51)
-		Text.Font = Enum.Font.Unknown
+		Text.Font = Enum.Font.Ubuntu
 		Text.Text = text
 		Text.TextColor3 = Color3.fromRGB(255, 255, 255)
 		Text.TextScaled = true
@@ -305,7 +305,7 @@ function lib:CreateMain()
 		Text_2.BackgroundTransparency = 1.000
 		Text_2.Position = UDim2.new(0, 10, 0, 0)
 		Text_2.Size = UDim2.new(0, 181, 0, 51)
-		Text_2.Font = Enum.Font.Unknown
+		Text_2.Font = Enum.Font.Ubuntu
 		Text_2.Text = text
 		Text_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 		Text_2.TextScaled = true
@@ -354,7 +354,7 @@ function lib:CreateMain()
 		SliderValue.BackgroundTransparency = 1.000
 		SliderValue.Position = UDim2.new(0, 372, 0, 0)
 		SliderValue.Size = UDim2.new(0, 40, 0, 51)
-		SliderValue.Font = Enum.Font.Unknown
+		SliderValue.Font = Enum.Font.Ubuntu
 		SliderValue.Text = "100"
 		SliderValue.TextColor3 = Color3.fromRGB(179, 179, 179)
 		SliderValue.TextScaled = true
