@@ -14,10 +14,6 @@ function library:CreateMain()
 	local VersionLabel = Instance.new("TextLabel")
 	local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
 	local Tabs = Instance.new("Frame")
-	local UIGridLayout = Instance.new("UIGridLayout")
-	local TabPreset = Instance.new("TextButton")
-	local UICorner_2 = Instance.new("UICorner")
-	local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
 	local CheatContainer = Instance.new("Frame")
 	local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 
@@ -99,31 +95,6 @@ function library:CreateMain()
 	Tabs.Position = UDim2.new(0.0134831462, 0, 0.076595746, 0)
 	Tabs.Size = UDim2.new(0.973033726, 0, 0.0851063803, 0)
 
-	UIGridLayout.Parent = Tabs
-	UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-	UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
-	UIGridLayout.VerticalAlignment = Enum.VerticalAlignment.Center
-	UIGridLayout.CellSize = UDim2.new(0.182999998, 0, 0.75, 0)
-
-	TabPreset.Name = "TabPreset"
-	TabPreset.Parent = Tabs
-	TabPreset.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
-	TabPreset.BorderSizePixel = 0
-	TabPreset.Position = UDim2.new(0.02078522, 0, 0.125, 0)
-	TabPreset.Size = UDim2.new(0.184757501, 0, 0.75, 0)
-	TabPreset.Font = Enum.Font.SourceSansBold
-	TabPreset.Text = "Main"
-	TabPreset.TextColor3 = Color3.fromRGB(126, 126, 126)
-	TabPreset.TextScaled = true
-	TabPreset.TextSize = 20.000
-	TabPreset.TextWrapped = true
-
-	UICorner_2.CornerRadius = UDim.new(0, 3)
-	UICorner_2.Parent = TabPreset
-
-	UITextSizeConstraint_4.Parent = TabPreset
-	UITextSizeConstraint_4.MaxTextSize = 20
-
 	CheatContainer.Name = "CheatContainer"
 	CheatContainer.Parent = MainFrame
 	CheatContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -137,6 +108,10 @@ function library:CreateMain()
 		local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
 		local Container = Instance.new("ScrollingFrame")
 		local UIGridLayout_2 = Instance.new("UIGridLayout")
+		local TabPreset = Instance.new("TextButton")
+		local UICorner_2 = Instance.new("UICorner")
+		local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
+		local UIGridLayout = Instance.new("UIGridLayout")
 		
 		CheatPreset.Name = name
 		CheatPreset.Parent = CheatContainer
@@ -174,6 +149,31 @@ function library:CreateMain()
 		UIGridLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
 		UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
 		UIGridLayout_2.CellSize = UDim2.new(0.970000029, 0, 0.0700000003, 0)
+		
+		UIGridLayout.Parent = Tabs
+		UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+		UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+		UIGridLayout.VerticalAlignment = Enum.VerticalAlignment.Center
+		UIGridLayout.CellSize = UDim2.new(0.182999998, 0, 0.75, 0)
+
+		TabPreset.Name = name
+		TabPreset.Parent = Tabs
+		TabPreset.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+		TabPreset.BorderSizePixel = 0
+		TabPreset.Position = UDim2.new(0.02078522, 0, 0.125, 0)
+		TabPreset.Size = UDim2.new(0.184757501, 0, 0.75, 0)
+		TabPreset.Font = Enum.Font.SourceSansBold
+		TabPreset.Text = name
+		TabPreset.TextColor3 = Color3.fromRGB(126, 126, 126)
+		TabPreset.TextScaled = true
+		TabPreset.TextSize = 20.000
+		TabPreset.TextWrapped = true
+
+		UICorner_2.CornerRadius = UDim.new(0, 3)
+		UICorner_2.Parent = TabPreset
+
+		UITextSizeConstraint_4.Parent = TabPreset
+		UITextSizeConstraint_4.MaxTextSize = 20
 	end
 	
 	function GameLib:CreateText(cheat, text)
