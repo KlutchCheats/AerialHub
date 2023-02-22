@@ -242,7 +242,7 @@ function library:CreateMain()
 		Text.Position = UDim2.new(0.0240963865, 0, 0, 0)
 		Text.Size = UDim2.new(0.739759028, 0, 1, 0)
 		Text.Font = Enum.Font.Unknown
-		Text.Text = Text
+		Text.Text = text
 		Text.TextColor3 = Color3.fromRGB(255, 255, 255)
 		Text.TextScaled = true
 		Text.TextSize = 25.000
