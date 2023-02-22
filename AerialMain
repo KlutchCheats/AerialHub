@@ -20,7 +20,7 @@ function library:CreateMain()
 	--Properties:
 
 	AerialHub.Name = "AerialHub"
-	AerialHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	AerialHub.Parent = game:GetService("CoreGui")
 	AerialHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	MainFrame.Name = "MainFrame"
