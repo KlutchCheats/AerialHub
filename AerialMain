@@ -15,7 +15,6 @@ function library:CreateMain()
 	local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
 	local Tabs = Instance.new("Frame")
 	local CheatContainer = Instance.new("Frame")
-	local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 
 	--Properties:
 
@@ -405,9 +404,6 @@ function library:CreateMain()
 		end
 		coroutine.wrap(WGKEWE_fake_script)()
 	end
-
-	UIAspectRatioConstraint.Parent = MainFrame
-	UIAspectRatioConstraint.AspectRatio = 0.947
 
 	-- Scripts:
 
